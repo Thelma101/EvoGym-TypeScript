@@ -6,12 +6,12 @@ type Props = {};
 
 const Navbar = (props: Props) => {
   const flexBetween = "flex items-center, justify-between";
-  return;
+  return (
   <nav>
     <div className={`${flexBetween} fixed top-0 z-30 w-full py-6`}>
       <div className={`${flexBetween} mx-auto w-5/6`}>
         {/* LEFT SIDE */}
-        <img src="Logo" alt="logo" />
+        <img src={Logo} alt="logo" />
 
         {/* RIGHT SIDE */}
         <div className={`${flexBetween} w-full`}>
@@ -28,7 +28,8 @@ const Navbar = (props: Props) => {
         </div>
       </div>
     </div>
-  </nav>;
+  </nav>
+  )
 };
 
 export default Navbar;
