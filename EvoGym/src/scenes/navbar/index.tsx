@@ -57,17 +57,37 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
                 </div>
               </div>
             ): (
-              <button className="p-2 rounded-full bg-secondary-500"
+              <button 
+               className="p-2 rounded-full bg-secondary-500"
                 onClick = {() => setIsMenuEnabled(!isMenuEnabled)}
                 >
                 <Bars3Icon className="w-6 h-6 text-white"/>
               </button>
-            )
-        }
+            )}
       </div>
     </div>
+    
+    {/* MOBILE MENU MODAL */}
+    {!isAboveMediumScreens && isMenuEnabled && (
+      <div
+        className="fixed right-0 bottom-0 h-full bg-primary-100 drop-shadow-xl w-[300px] "
+      >
+        {/* CLOSE ICON */}
+        <div 
+          className="flex justify-end p-12"
+        >
+          <button 
+            onClick={() => setIsMenuEnabled(!isMenuEnabled)}
+            >
+              <XMarkIcon
+                className="w-6 h-6 text-gray-400"
+              />
+            </button>
+        </div>
+      </div>
+    ) }
   </nav>
-  )
+  ); 
 };
 
 export default Navbar;
