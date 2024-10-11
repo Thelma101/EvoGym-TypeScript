@@ -84,6 +84,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
               />
             </button>
         </div>
+        {/* MOBILE  */}
       </div>
     ) }
   </nav>
